@@ -1,3 +1,6 @@
+To run this project, in a terminal, navigate to the directory of the project and run either 'yarn start' or 'npm start'
+
+
 Implement a webpage with the following requirements:
 Have a web page with three main sections:
 Section 1: A title with the text “Click on your least favorite sports below to delete them until you have three left”

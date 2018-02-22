@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-import { Header, Button, Segment } from 'semantic-ui-react'
+import { Header, Button, Image } from 'semantic-ui-react'
 import './App.css';
+import trash from './trash-10-48.jpg'
 
 class Sports extends Component {
 
   state = {}
-  componentDidMount() {
+
+  componentWillMount() {
     this.setList();
+  }
+  componentDidUpdate() {
+    if (this.state.sportList.length === 0) {
+      alert("Oh no, you deleted all the sports :(")
+    }
   }
 
   setList = () => {
@@ -23,20 +30,46 @@ class Sports extends Component {
     this.setState({ sportList: sports})
   }
 
-  handleclick = (e) => {
-    e.preventDevault();
+  handleClick = (e) => {
+    e.preventDefault();
+    let currentList = this.state.sportList
+    let newList = currentList.filter(sport => sport.name != e.target.name)
+    let deletedSport = document.getElementById(e.target.value)
+    deletedSport.className = "animated"
+
+
+    setTimeout( () => { this.setState({ sportList: newList }) },3000)
   }
 
   render() {
     return (
     <div>
-    <Header as='h3'>
-    Click on your least favorite sports below to delete them until you have three left
-    </Header>
-    <Segment>
+      <Header as='h3'>
+      Click on your least favorite sports below to delete them until you have three left
+      </Header>
+      <div className="listStage">
+        <ul>
 
-    </Segment>
-    <Button primary>Reset List!</Button>
+          {this.state.sportList.map( (sport) => (
+            <li>
+              <button
+                type="button"
+                className="listButton"
+                key={sport.id}
+                id={sport.id}
+                name={sport.name}
+                value={sport.id}
+                onClick={this.handleClick}
+              >{sport.name}</button></li>
+            )
+           )
+          }
+        </ul>
+      </div>
+      <Image className="trashcan" src={trash} size='small' />
+      <div>
+        <Button primary className="reset" onClick={this.setList}>Reset List!</Button>
+      </div>
     </div>
     );
   }
