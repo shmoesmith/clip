@@ -1,3 +1,29 @@
+Implement a webpage with the following requirements:
+Have a web page with three main sections:
+Section 1: A title with the text “Click on your least favorite sports below to delete them until you have three left”
+Section 2: A list of the sports names found at the bottom of this page.
+Section 3: A button to reset the list to its original state
+You can style this webpage however you’d like (fonts, colors, etc.)
+As a user clicks on a specific sport name, it should be deleted from the list.
+There should be an animation (of your choice) associated with the deleting of a sport name
+If the list of sports names is empty, you should show a message to the user saying “Oh no, you deletd all the sports :(”
+You can use any front end libraries to accomplish this task (ReactJS is preferred)
+Please add a README.md file to the project that explains how to run it
+
+Please use the following list of sports to populate the webpage:
+
+const sports = [
+  { id: 'ab123aa', name: 'Baseball' },
+  { id: 'ab124aa', name: 'Golf' },
+  { id: 'ab125aa', name: 'Hockey' },
+  { id: 'ab126bb', name: 'Soccer' },
+  { id: 'ab127bb', name: 'Football' },
+  { id: 'ab128cc', name: 'Skiing' },
+  { id: 'ab129dd', name: 'Ping Pong' },
+  { id: 'ab130cc', name: 'Foosball' },
+];
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -300,7 +326,7 @@ In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and s
 
 Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
 
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
+The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine.
 
 ## Formatting Code Automatically
 
@@ -1989,7 +2015,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
@@ -2419,7 +2445,7 @@ To resolve this:
 1. Open an issue on the dependency's issue tracker and ask that the package be published pre-compiled.
   * Note: Create React App can consume both CommonJS and ES modules. For Node.js compatibility, it is recommended that the main entry point is CommonJS. However, they can optionally provide an ES module entry point with the `module` field in `package.json`. Note that **even if a library provides an ES Modules version, it should still precompile other ES6 features to ES5 if it intends to support older browsers**.
 
-2. Fork the package and publish a corrected version yourself. 
+2. Fork the package and publish a corrected version yourself.
 
 3. If the dependency is small enough, copy it to your `src/` folder and treat it as application code.
 
