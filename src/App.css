@@ -26,7 +26,7 @@ ul {
 }
 .animated {
   animation-name: slide;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-timing-function: linear;
 }
 .reset {
