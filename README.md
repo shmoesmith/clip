@@ -1,4 +1,6 @@
-To run this project, in a terminal, navigate to the directory of the project and run either 'yarn start' or 'npm start'
+To run this project clone or fork the git repo,  then in a terminal, navigate to the directory of
+the project and run 'npm install' to update your dependencies
+then run either 'yarn start' or 'npm start'
 
 
 Implement a webpage with the following requirements:
